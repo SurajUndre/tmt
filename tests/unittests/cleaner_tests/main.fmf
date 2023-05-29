@@ -1,0 +1,4 @@
+summary: Concise summary describing what the test does
+framework: shell
+test: |
+  python3 -m unittest */*.py

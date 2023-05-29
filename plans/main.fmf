@@ -1,0 +1,27 @@
+summary: Essential command line features
+discover:
+    how: fmf
+provision:
+    how: minute
+    image: 1MT-RHEL-8.7.0-released
+prepare:
+    - name: installing git
+      how: shell
+      script: yum install -y git
+
+    - name: installing python3
+      how: shell
+      script: yum install -y python3
+
+    - name: installing sos
+      how: shell
+      script: yum install -y sos
+
+    - name: installing python3-avocado
+      how: shell
+      script: dnf install -y python3-avocado               
+execute:
+    how: tmt 
+report:
+    how: html
+    open: true
